@@ -1,0 +1,5 @@
+@media print {
+    .bgimg {background-image: none;}
+    #non-printable { display: none; }
+    #printable { display: block; }
+}

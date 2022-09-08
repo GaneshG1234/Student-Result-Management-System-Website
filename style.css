@@ -1,0 +1,301 @@
+/*
+	The7 by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+/*
+
+[Table of content]
+
+1. General Styling
+2. Header
+3. Home Slider, Parallax & Video
+4. Services Section
+5. Work Section
+6. Logo Carousel
+7. CLient Carousel
+8. Blog Section
+9. Pricing Section
+10. Contact & Comment Forms
+11. Footer
+12. Loader
+13. Clearfix
+
+
+[Color codes]
+Green #1abc9c
+Dark Blue #16a085
+Grey #ECF0F1
+
+*/
+
+/* *********************************************************
+  General Styling 
+********************************************************* */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  padding: 3.5em 0;
+}
+
+.grey {
+  background: #ECF0F1;
+  padding: 100px 0 150px;
+}
+
+a {
+  color:#1abc9c;
+}
+
+a:hover {
+  color: #16a085;
+}
+
+a, img, .overlay, input, textarea, .plan-wrap p, .filters .filter {
+/*transition*/
+  -webkit-transition: all .12s linear;
+     -moz-transition: all .12s linear;
+       -o-transition: all .12s linear;
+          transition: all .12s linear;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.7em;
+  color: #777777;
+  font-weight: normal;
+}
+
+body, input, textarea {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, .navigation a, .btn, .filters .filter {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  position: relative;
+  margin: 1em 0 1.4em;
+  color: #484f58;
+}
+
+h1,h2 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 2.8em;
+  line-height: .9em;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: .9em;
+}
+
+h4,h5,h6 {
+  font-size: 1.125em;
+  line-height: .5em;
+}
+
+blockquote {
+  line-height: 1.2em;
+  display: inline-block;
+  margin: 1.3em 0;
+  padding: 2px 20px 0 20px;
+  border-left: 3px solid #e8e8e8;
+}
+
+blockquote p {
+  margin-bottom: 0 !important;
+}
+
+.pleft-25 {
+  padding-left: 25px;
+}
+
+.pright-25 {
+  padding-right: 25px;
+}
+
+.curveUpColor, .curveDownColor {
+  fill: #fff;
+  stroke: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.curveUpColor {
+  margin-top: -100px;
+}
+
+.curveDownColor {
+  margin-bottom: -100px;
+}
+
+.curveMapUp {
+  margin-top: 52px;
+}
+
+.curveMapDown {
+  margin-top: -238px;
+}
+
+.curveGrey {
+  fill: #ECF0F1;
+  stroke: #ECF0F1;
+}
+/*------------------------------------------------------------- 
+  Team
+---------------------------------------------------------------*/
+
+.team-wrap {
+  text-align: center;
+  background: #fff;
+/* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+}
+
+.staff-content {
+/*border-radius*/
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  /* background: #fff; */
+  /* background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+}
+
+.staff-info {
+  padding: 0 10px;
+}
+
+.staff-info span {
+  color:#1abc9c;
+}
+
+.staff-img {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  background: #fff;
+  border-top-right-radius: 21px;
+  border-bottom-left-radius: 41px;
+
+}
+
+.staff-img {
+  position: relative;
+  display: table;
+  width: 100%;
+}
+
+.staff-img img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.staff-img:hover img {
+  opacity: 1;
+}
+
+.staff-content h5 {
+  margin-bottom: .5em;
+}
+
+.staff-content span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.team-social {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #fff;
+  width: 100%;
+  opacity: 0;
+  padding: 7px 0;
+  height: 50px;
+  transition: .1s linear;
+  transform: translateY(10px);
+}
+
+.team-social a {
+  display: inline-block;
+  padding: 0 7px;
+}
+
+.team-social a i {
+  font-size: 1.5em;
+  display: table;
+  padding: 8px;
+  color: #484f58;
+}
+
+.sl-fb i:hover {
+  color: #4f689e;
+}
+
+.sl-tw i:hover {
+  color: #74c7d5;
+}
+
+.sl-gp i:hover {
+  color: #df5c64;
+}
+
+.sl-ln i:hover {
+  color: #017eba;
+}
+
+.staff-content:hover .team-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/*------------------------------------------------------------- 
+  Media queries
+---------------------------------------------------------------*/
+
+@media handheld, only screen and (max-width: 1200px) {
+
+
+  .team-social {
+    height: 30px;
+  }
+
+  .team-social a i {
+    font-size: 1em;
+    padding: 3px;
+  }
+}
+
+@media handheld, only screen and (max-width: 767px) {
+  
+@media handheld, only screen and (max-width: 480px) {
+  
+  
+  .team-social {
+    height: 50px;
+    opacity: 1;
+  }
+
+  .team-social a i {
+    font-size: 1.5em;
+    padding: 8px;
+  }
